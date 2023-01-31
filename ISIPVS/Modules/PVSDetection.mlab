@@ -1,4 +1,5 @@
 // MDL v1 utf8
+mevislabVersion = 3.4.3
 network  {
   watchlist = ""
 }
@@ -63,6 +64,7 @@ module View3D {
     inventorInputOn = TRUE
     inventorOutputOn = FALSE
     lutType = Ramp
+    rendererType = Slicer
     currentTimePoint = 0
     staticSamplingRate = 1
     quality = 1
@@ -89,7 +91,6 @@ module View3D {
     camFocal = 384.68857
     camHeight = 0.78539801
     decoration = FALSE
-    hiResRendering = TRUE
     annotations = TRUE
     background = TRUE
     mode = VolumeRendering
@@ -203,7 +204,6 @@ module OrthoView2D {
     showCurrentPos = FALSE
     worldPosition = "-1 25.2538986206055 67"
     coloredMode = FALSE
-    hiResRendering = TRUE
   }
 }
 module WorldVoxelConvert {
@@ -515,6 +515,11 @@ module OrthoReformat3 {
   fields  {
     instanceName = OrthoReformat31
     useGlobalInputImage = TRUE
+    applyModifyPatientOrientationMatrix = FALSE
+    modifyPatientOrientationMatrix = "1 0 0 0
+0 1 0 0
+0 0 1 0
+0 0 0 1"
   }
 }
 module OrthoReformat3 {
@@ -525,6 +530,11 @@ module OrthoReformat3 {
   fields  {
     instanceName = OrthoReformat3
     useGlobalInputImage = TRUE
+    applyModifyPatientOrientationMatrix = FALSE
+    modifyPatientOrientationMatrix = "1 0 0 0
+0 1 0 0
+0 0 1 0
+0 0 0 1"
   }
 }
 module SPM {
@@ -561,12 +571,11 @@ module MLImageFormatLoad {
   }
   fields  {
     instanceName = T2
-    updateMode = AutoUpdate
     regionOffset = "0 0 0 0 0 0"
     suppressWorldPos = FALSE
     applyMode = AutoUpdate
     suppressCheckSumTests = FALSE
-    fileName = D:/data/j/00004-16032011/T2TSE.mlimage
+    fileName = ""
   }
 }
 module MLImageFormatLoad {
@@ -583,12 +592,11 @@ module MLImageFormatLoad {
   }
   fields  {
     instanceName = T1
-    updateMode = AutoUpdate
     regionOffset = "0 0 0 0 0 0"
     suppressWorldPos = FALSE
     applyMode = AutoUpdate
     suppressCheckSumTests = FALSE
-    fileName = D:/data/j/00004-16032011/T1.mlimage
+    fileName = ""
   }
 }
 connections  {

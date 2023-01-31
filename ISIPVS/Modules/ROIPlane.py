@@ -4,7 +4,7 @@ from AlgorithmModule.Definitions import StatusCode
 from mevis import *
 import os
 import numpy as np
-import cPickle
+import pickle
 
 
 class ROIPlane( AlgorithmMacroModule ):
@@ -108,7 +108,7 @@ class ROIPlane( AlgorithmMacroModule ):
     self._ctx.field("MLImageFormatSave.save").touch()
     
     with open(outputPlaneFilename, "wb") as outputPlaneFile:
-      cPickle.dump(t1Plane, outputPlaneFile)
+      pickle.dump(t1Plane, outputPlaneFile)
     
     
   
@@ -139,7 +139,7 @@ class ROIPlane( AlgorithmMacroModule ):
       self._ctx.field(i+"Load.fileName").setStringValue(outputImageFilename.replace('mlimage', i+'.mlimage') )
     
     with open(outputPlaneFilename, "rb") as outputPlaneFile:
-      t2Plane = cPickle.load(outputPlaneFile)
+      t2Plane = pickle.load(outputPlaneFile)
     self._ctx.field("outPlane").setValue(t2Plane)
     
   

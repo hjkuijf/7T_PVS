@@ -4,7 +4,7 @@ from AlgorithmModule.Definitions import StatusCode
 from mevis import *
 import os
 import numpy as np
-import cPickle
+import pickle
 
 
 class Tracking( AlgorithmMacroModule ):

@@ -2,7 +2,7 @@ from AlgorithmMacroModule.AlgorithmMacroModule import AlgorithmMacroModule, Inpu
 from AlgorithmModule.Definitions import StatusCode
 
 from mevis import *
-import cPickle
+import pickle
 import os
 
 class PVSDetection( AlgorithmMacroModule ):
@@ -110,11 +110,11 @@ class PVSDetection( AlgorithmMacroModule ):
     planeFilename = MLABFileDialog.getOpenFileName("MNI_plane", "Plane file (*.plane)", "Open Plane")
     if not planeFilename == "":
       with open(planeFilename, "rb") as planeFile:
-        self.inPlaneField.setValue(cPickle.load(planeFile))
+        self.inPlaneField.setValue(pickle.load(planeFile))
     
   
   def savePlane( self ):
     planeFilename = MLABFileDialog.getSaveFileName("MNI_plane", "Plane file (*.plane)", "Save Plane")
     if not planeFilename == "":
       with open(planeFilename, "wb") as planeFile:
-        cPickle.dump(self.inPlaneField.value, planeFile)
+        pickle.dump(self.inPlaneField.value, planeFile)

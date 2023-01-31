@@ -2,7 +2,7 @@ from AlgorithmMacroModule.AlgorithmMacroModule import AlgorithmMacroModule, Inpu
 from AlgorithmModule.Definitions import StatusCode
 
 from mevis import *
-import os, string, subprocess, _winreg
+import os, string, subprocess, winreg
 
 
 class MatlabNotFoundError(Exception):
