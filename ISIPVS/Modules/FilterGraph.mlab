@@ -1,0 +1,80 @@
+// MDL v1 utf8
+network  {
+  watchlist = ""
+}
+module SaveBase {
+  internal  {
+    frame = "989 -915 88 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = SaveBase
+    nodeName = BaseObject
+    filename = object
+    useBaseDir = FALSE
+    baseDir = ""
+    format = XML
+    autoSave = FALSE
+    allowOverwrite = TRUE
+  }
+}
+module GraphFilter {
+  internal  {
+    frame = "985 -795 96 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1282 375 333 478"
+        sizeHint = "328 478"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = GraphFilter
+    onInputChangeBehavior = Clear
+    inMinimumLength = 2
+    inEnableLengthFiltering = TRUE
+    inMaximumLength = 0
+    inUseMinimumLength = TRUE
+    inUseMaximumLength = FALSE
+    inMinimumTortuosity = 1
+    inEnableTortuosityFiltering = FALSE
+    inMaximumTortuosity = 1
+    inUseMinimumTortuosity = FALSE
+    inUseMaximumTortuosity = FALSE
+  }
+}
+module BaseBypass {
+  internal  {
+    frame = "969 -683 128 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = BaseBypass
+    bypass = TRUE
+    noBypass = FALSE
+  }
+}
+module LoadBase {
+  internal  {
+    frame = "853 -915 120 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = LoadBase
+    autoUpdate = AutoClear
+    nodeName = ""
+    filename = D:/data/j/00004-16032011/FilterGraph/filtered_seedpoint.xml
+    useBaseDir = FALSE
+    baseDir = ""
+    format = Auto
+  }
+}
+connections  {
+  SaveBase.inObject = GraphFilter.outGraph
+  GraphFilter.inGraph = BaseBypass.baseOut0
+}
+networkModel = ""

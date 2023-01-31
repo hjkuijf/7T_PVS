@@ -1,0 +1,626 @@
+// MDL v1 utf8
+network  {
+  watchlist = ""
+}
+module GraphToMNI {
+  internal  {
+    frame = "925 -563 104 56"
+    moduleGroupName = ""
+    localMacro = 1
+    windows  {
+      window _default {
+        geometry = "1113 449 484 404"
+        sizeHint = "328 404"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = GraphToMNI
+    onInputChangeBehavior = Clear
+    inOutputDir = D:/data/j/00004-16032011/GraphToMNI
+    inDo = TRUE
+    inMNItoT1 = "D:/data/j/00004-16032011/MNI\\MNI_to_T1.txt"
+    inT1toT2 = "D:/data/j/00004-16032011/MNI\\T1_to_T2.txt"
+  }
+}
+module FilterGraph {
+  internal  {
+    frame = "917 -475 120 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    localMacro = 1
+    windows  {
+      window _default {
+        geometry = "861 493 620 344"
+        sizeHint = "328 344"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = FilterGraph
+    onInputChangeBehavior = Clear
+    inOutputDir = D:/data/j/00004-16032011/FilterGraph
+    inDo = TRUE
+  }
+}
+module View3D {
+  internal  {
+    frame = "393 -211 144 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "465 308 1004 645"
+        sizeHint = "1004 645"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = View3D
+    autoViewAll = TRUE
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    lutType = Ramp
+    currentTimePoint = 0
+    staticSamplingRate = 1
+    quality = 1
+    filterVolumeData = FilterLinear
+    lutEditorColorPoints = "[ 0 0 0 0, 4095 1 1 1 ]"
+    lutEditorAlphaPoints = "[ 0 0, 4095 1 ]"
+    lutEditorRelativeLut = FALSE
+    lutEditorColorInterpolation = InterpolateRGB
+    lutEditorAlphaFactor = 1
+    orientationProjectionType = PERSPECTIVE
+    orientationLocation = LOWER_RIGHT
+    orientationOn = TRUE
+    orientationModel = CUBE
+    greyCenter = 0.545000016689301
+    greyWidth = 0.847500026226044
+    alphaFactor = 1
+    colorFactor = "1 1 1"
+    camType = TRUE
+    camPosition = "340.188568115234 18 18"
+    camOrientation = "0.577350258827209 0.577350258827209 0.577350258827209 2.09439516067505"
+    initialCameraOrientation = CAMERA_KEEP_AS_IS
+    camFar = 437.62576
+    camNear = 331.85638
+    camFocal = 384.68857
+    camHeight = 0.78539801
+    decoration = FALSE
+    hiResRendering = TRUE
+    annotations = TRUE
+    background = TRUE
+    mode = VolumeRendering
+    interactiveQuality = Medium
+  }
+  internalFields  {
+    renderer.gradientQuality = GradientQualityAutomatic
+    renderer.enhancementAlphaMix = 0.25
+    renderer.boundaryEnhancement = FALSE
+    renderer.boundaryEnhancementFactor = 1
+    renderer.boundaryEnhancementExponent = 1
+    renderer.boundaryEnhancementGradientBias = 0
+    renderer.silhouetteEnhancement = FALSE
+    renderer.silhouetteEnhancementExponent = 1
+    renderer.silhouetteEnhancementFactor = 1
+    renderer.toneShading = FALSE
+    renderer.toneShadingWarmColor = "0.67451000213623 0.533333003520966 0.141176000237465"
+    renderer.toneShadingColdColor = "0 0 0.400000005960464"
+    renderer.toneShadingWarmDiffuse = 0.60000002
+    renderer.toneShadingColdDiffuse = 0.2
+    renderer.toneShadingAngle = 45
+    renderer.materialAmbient = 0.60000002
+    renderer.materialDiffuse = 1
+    renderer.materialSpecular = 1
+    renderer.materialSpecularity = 32
+    renderer.light1Enabled = TRUE
+    renderer.light1DiffuseIntensity = 1
+    renderer.light1SpecularIntensity = 1
+    renderer.light1Color = "1 1 1"
+    renderer.light1PolarPhi = 45
+    renderer.light1PolarRho = 0
+    renderer.light2Enabled = FALSE
+    renderer.light2DiffuseIntensity = 1
+    renderer.light2SpecularIntensity = 1
+    renderer.light2Color = "1 1 1"
+    renderer.light2PolarPhi = 0
+    renderer.light2PolarRho = 0
+    renderer.light3Enabled = FALSE
+    renderer.light3DiffuseIntensity = 1
+    renderer.light3SpecularIntensity = 1
+    renderer.light3Color = "1 1 1"
+    renderer.light3PolarPhi = -45
+    renderer.light3PolarRho = 0
+    renderer.sizeOutputX = 193
+    renderer.sizeOutputY = 229
+    renderer.sizeOutputZ = 193
+    renderer.subVolumeStartX = 89
+    renderer.subVolumeStartY = 0
+    renderer.subVolumeStartZ = 0
+    renderer.subVolumeEndX = 193
+    renderer.subVolumeEndY = 229
+    renderer.subVolumeEndZ = 193
+    clip.hideGeometry = FALSE
+    clip.on = FALSE
+    clip.left = FALSE
+    clip.right = FALSE
+    clip.top = FALSE
+    clip.bottom = FALSE
+    clip.rear = FALSE
+    clip.front = FALSE
+    clip.translation0 = "1 0 0"
+    clip.translation1 = "-1 0 0"
+    clip.translation2 = "0 1 0"
+    clip.translation3 = "0 -1 0"
+    clip.translation4 = "0 0 1"
+    clip.translation5 = "0 0 -1"
+    clip.rotation0 = "0 0 0.999999940395355 1.57079994678497"
+    clip.rotation1 = "0 0 -0.999999940395355 1.57079994678497"
+    clip.rotation2 = "0 0 -1 3.1415901184082"
+    clip.rotation3 = "0 0 1 0"
+    clip.rotation4 = "-0.999999940395355 0 0 1.57079994678497"
+    clip.rotation5 = "0.999999940395355 0 0 1.57079994678497"
+  }
+}
+module OrthoView2D {
+  internal  {
+    frame = "221 -307 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "64 400 707 615"
+        sizeHint = "400 430"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = OrthoView2D1
+    inventorInputOn = TRUE
+    inventorOutputOn = FALSE
+    synchronizePosition = TRUE
+    layout = LAYOUT_CUBE_EQUAL
+    filterMode = FILTER_LINEAR
+    synchronizeZoom = TRUE
+    synchronizePanning = FALSE
+    useGlobalInputImage = TRUE
+    snapToCenter = FALSE
+    alternCubeLayout = FALSE
+    timePoint = 0
+    useManagedInteraction = FALSE
+    enableSlicing = TRUE
+    borderOn = TRUE
+    borderColor = "0.899999976158142 0.899999976158142 0.899999976158142"
+    grayWidth = 98.5479888916016
+    grayCenter = 49.2846069335938
+    annotationOn = TRUE
+    annotationSizeMode = ANNO_SHOW_DETAILED
+    annotationFontSize = ANNO_SIZE_AUTO
+    valueHighPrecision = TRUE
+    annoCoords = Voxel
+    showCurrentPos = FALSE
+    worldPosition = "-1 25.2538986206055 67"
+    coloredMode = FALSE
+    hiResRendering = TRUE
+  }
+}
+module WorldVoxelConvert {
+  internal  {
+    frame = "69 -115 136 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "706 471 414 237"
+        sizeHint = "414 237"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = WorldVoxelConvert
+    voxelX = 0
+    voxelY = 0
+    voxelZ = 0
+    worldX = 96.5
+    worldY = 132.5
+    worldZ = -78.5
+    voxelPos = "0 0 0"
+    worldPos = "96.5 132.5 -78.5"
+    voxelMode = TRUE
+    worldMode = FALSE
+    intVoxelCoords = FALSE
+    keepConstant = Voxel
+  }
+}
+module SoView2DPlane {
+  internal  {
+    frame = "357 -3 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "111 475 899 586"
+        sizeHint = "404 450"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SoView2DPlane
+    interactionProviderID = ""
+    drawingOn = TRUE
+    editingOn = TRUE
+    fixZOn = TRUE
+    color = "1 1 1"
+    selectionTolerance = 4
+    needsValidVoxel = TRUE
+    button1 = PRESSED
+    button2 = IGNORED
+    button3 = IGNORED
+    shift = IGNORED
+    control = IGNORED
+    alt = IGNORED
+    wantsAllEvents = TRUE
+    wantsKeyEvents = FALSE
+    wantsMouseWheelEvents = FALSE
+    setEventHandled = FALSE
+    ignoreHandledEvents = FALSE
+    createNewMode = FALSE
+    renderOnSlab = FALSE
+    clipToSlice = TRUE
+    cursorShape = UNDEFINED_CURSOR
+    plane = "0 -0.16458386182785 0.986363172531128 35.0918884277344"
+    maskValidAndHit = FALSE
+    blendMin = 0.1
+    blendMax = 1
+    useTranslationRange = FALSE
+    translationRangeMin = -1
+    translationRangeMax = 1
+    normalOn = FALSE
+    shadowOn = FALSE
+    externalRotationAxisOn = FALSE
+    allowMoveExternalRotationAxis = FALSE
+    externalRotationAxis = "0 0 0"
+    centerGapSize = 0
+    normalSize = 10
+    normalOffset = 0
+    normalShape = TRIANGLE
+    rotationDifference = "1 0 0 0
+0 0.999965667724609 0.00828633643686771 0
+0 -0.00828633643686771 0.999965667724609 0
+0 0 0 1"
+    translationLineFraction = 0.5
+    fixedLineWidth = FALSE
+    interactionMode = BOTH
+    useAntiAliasing = TRUE
+    useMouseCursors = TRUE
+  }
+}
+module 3DTracking {
+  internal  {
+    frame = "917 -371 104 56"
+    moduleGroupName = ""
+    localMacro = 1
+    windows  {
+      window _default {
+        geometry = "309 724 844 344"
+        sizeHint = "328 344"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = 3DTracking
+    onInputChangeBehavior = Clear
+    inOutputDir = "D:/data/j/00004-16032011\\3DTracking"
+    inDo = TRUE
+  }
+}
+module Seedpoints {
+  internal  {
+    frame = "901 -219 120 56"
+    moduleGroupName = ""
+    localMacro = 1
+    windows  {
+      window _default {
+        geometry = "828 770 918 433"
+        sizeHint = "328 433"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Seedpoints
+    onInputChangeBehavior = Clear
+    inOutputDir = "D:/data/j/00004-16032011\\Seedpoints"
+    inDo = TRUE
+  }
+}
+module PVSVesselness {
+  internal  {
+    frame = "1013 77 120 56"
+    moduleGroupName = ""
+    localMacro = 1
+    windows  {
+      window _default {
+        geometry = "986 653 608 344"
+        sizeHint = "328 344"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = PVSVesselness
+    onInputChangeBehavior = Clear
+    inOutputDir = "D:/data/j/00004-16032011\\PVSVesselness"
+    inDo = FALSE
+  }
+}
+module LocalPath {
+  internal  {
+    frame = "193 89 128 64"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "840 746 420 212"
+        sizeHint = "420 212"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = MNI_T1Filename
+    localName = $(NETWORK)/mni/mni_icbm152_t1_tal_nlin_sym_09c.nii
+    checkIfFileExists = TRUE
+    browseType = file
+  }
+}
+module itkImageFileReader {
+  internal  {
+    frame = "189 -7 136 64"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "482 401 649 395"
+        sizeHint = "299 395"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = MNI_T1
+    fileDataType = float
+    autoDetermineDataType = TRUE
+    correctSubVoxelShift = TRUE
+    fileDimension = 3
+    info = "Loading okay."
+    numDims = 3
+    fileType = TypeNotApplicable
+    componentType = float
+    pixelType = SCALAR
+    loaderType = NiftiImageIO
+    outputMetaDataStr = "ITK_FileNotes : mnc2nii mni_icbm152_nlin_sym_09c/mni_icbm152_t1_tal_nlin_sym_09c.mnc mni_icbm15
+aux_file : 
+bitpix : 16
+cal_max : 100
+cal_min : 0
+datatype : 4
+descrip : mnc2nii mni_icbm152_nlin_sym_09c/mni_icbm152_t1_tal_nlin_sym_09c.mnc mni_icbm15
+dim[0] : 3
+dim[1] : 193
+dim[2] : 229
+dim[3] : 193
+dim[4] : 1
+dim[5] : 1
+dim[6] : 0
+dim[7] : 0
+dim_info : 
+intent_code : 0
+intent_name : 
+intent_p1 : 0
+intent_p2 : 0
+intent_p3 : 0
+pixdim[0] : 0
+pixdim[1] : 1
+pixdim[2] : 1
+pixdim[3] : 1
+pixdim[4] : 0
+pixdim[5] : 1
+pixdim[6] : 0
+pixdim[7] : 0
+qform_code : 0
+qoffset_x : 0
+qoffset_y : 0
+qoffset_z : 0
+quatern_b : 0
+quatern_c : 0
+quatern_d : 0
+scl_inter : 49.2854
+scl_slope : 0.00150375
+sform_code : 4
+slice_code : 
+slice_duration : 0
+slice_end : 0
+slice_start : 0
+srow_x : 1 0 0 -96
+srow_y : 0 1 0 -132
+srow_z : 0 0 1 -78
+toffset : 0
+vox_offset : 352
+xyzt_units : 
+
+"
+    suppressErrorPosting = FALSE
+    unresolvedFileName = $(NETWORK)/mni/mni_icbm152_t1_tal_nlin_sym_09c.nii
+  }
+}
+module ROIPlane {
+  internal  {
+    frame = "901 -107 120 56"
+    moduleGroupName = ""
+    localMacro = 1
+    windows  {
+      window _default {
+        geometry = "724 323 930 563"
+        sizeHint = "329 460"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ROIPlane
+    onInputChangeBehavior = Clear
+    inOutputDir = "D:/data/j/00004-16032011\\ROIPlane"
+    inT1_to_T2 = "D:/data/j/00004-16032011/MNI\\T1_to_T2.txt"
+    inMNI_to_T1 = "D:/data/j/00004-16032011/MNI\\MNI_to_T1.txt"
+    inDo = TRUE
+    inZ = 115
+    inPlane = "0 -0.16458386182785 0.986363172531128 35.0918884277344"
+    outPlane = "0 0 0 0"
+  }
+}
+module MNI {
+  internal  {
+    frame = "717 61 104 56"
+    moduleGroupName = ""
+    localMacro = 1
+    windows  {
+      window _default {
+        geometry = "198 556 830 400"
+        sizeHint = "328 400"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "89 498 873 600"
+        sizeHint = "260 223"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = MNI
+    onInputChangeBehavior = Clear
+    inOutputDir = "D:/data/j/00004-16032011\\MNI"
+    inDo = FALSE
+    outT1_to_T2 = "D:/data/j/00004-16032011/MNI\\T1_to_T2.txt"
+    outMNI_to_T1 = "D:/data/j/00004-16032011/MNI\\MNI_to_T1.txt"
+  }
+}
+module OrthoReformat3 {
+  internal  {
+    frame = "857 365 128 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = OrthoReformat31
+    useGlobalInputImage = TRUE
+  }
+}
+module OrthoReformat3 {
+  internal  {
+    frame = "661 365 120 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = OrthoReformat3
+    useGlobalInputImage = TRUE
+  }
+}
+module SPM {
+  internal  {
+    frame = "717 237 168 56"
+    moduleGroupName = ""
+    localMacro = 1
+    windows  {
+      window _default {
+        geometry = "1051 390 608 313"
+        sizeHint = "328 313"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SPM
+    onInputChangeBehavior = Clear
+    inOutputDir = "D:/data/j/00004-16032011\\SPM"
+    inDo = FALSE
+  }
+}
+module MLImageFormatLoad {
+  internal  {
+    frame = "845 481 152 64"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "742 425 450 411"
+        sizeHint = "450 411"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = T2
+    updateMode = AutoUpdate
+    regionOffset = "0 0 0 0 0 0"
+    suppressWorldPos = FALSE
+    applyMode = AutoUpdate
+    suppressCheckSumTests = FALSE
+    fileName = D:/data/j/00004-16032011/T2TSE.mlimage
+  }
+}
+module MLImageFormatLoad {
+  internal  {
+    frame = "653 481 152 64"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "742 425 450 411"
+        sizeHint = "450 411"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = T1
+    updateMode = AutoUpdate
+    regionOffset = "0 0 0 0 0 0"
+    suppressWorldPos = FALSE
+    applyMode = AutoUpdate
+    suppressCheckSumTests = FALSE
+    fileName = D:/data/j/00004-16032011/T1.mlimage
+  }
+}
+connections  {
+  GraphToMNI.baseIn0 = FilterGraph.baseOut0
+  GraphToMNI.inMNItoT1 = MNI.outMNI_to_T1
+  GraphToMNI.inT1toT2 = MNI.outT1_to_T2
+  FilterGraph.baseIn0 = 3DTracking.baseOut0
+  View3D.inImage = MNI_T1.output0
+  OrthoView2D1.image = MNI_T1.output0
+  OrthoView2D1.inInvPreLUT = SoView2DPlane.self
+  WorldVoxelConvert.input0 = MNI_T1.output0
+  3DTracking.input0 = PVSVesselness.output0
+  3DTracking.input1 = MNI.outWM
+  3DTracking.baseIn0 = Seedpoints.baseOut0
+  Seedpoints.inputT2 = ROIPlane.outROIT2
+  Seedpoints.inputT1 = ROIPlane.outROIT1
+  Seedpoints.inputVesselness = ROIPlane.outROIVesselness
+  Seedpoints.inputMask = ROIPlane.outROIMask
+  PVSVesselness.input0 = OrthoReformat31.output2
+  MNI_T1.unresolvedFileName = MNI_T1Filename.trueName
+  ROIPlane.inT2 = OrthoReformat31.output2
+  ROIPlane.inWM = MNI.outWM
+  ROIPlane.inT1atT2 = MNI.outT1atT2
+  ROIPlane.inVesselness = PVSVesselness.output0
+  ROIPlane.inT1_to_T2 = MNI.outT1_to_T2
+  ROIPlane.inMNI_to_T1 = MNI.outMNI_to_T1
+  ROIPlane.inPlane = SoView2DPlane.plane
+  MNI.inT1 = OrthoReformat3.output2
+  MNI.inT2 = OrthoReformat31.output2
+  MNI.inWM = SPM.outC2
+  OrthoReformat31.input0 = T2.output0
+  OrthoReformat3.input0 = T1.output0
+  SPM.inT1 = OrthoReformat3.output2
+}
+networkModel = ""

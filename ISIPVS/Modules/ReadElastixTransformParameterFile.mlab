@@ -1,0 +1,67 @@
+// MDL v1 utf8
+network  {
+  watchlist = ""
+}
+module ConvertITKTransformParameters {
+  internal  {
+    frame = "1233 1189 224 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "979 685 600 112"
+        sizeHint = "600 112"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ConvertITKTransformParameters
+    inputParameters = "0.1 0.2 -0.1 5 4 3"
+    outputEuler = "0.1 0.2 -0.1 5 4 3"
+    outputAffine = "0.977150407022 0.0993346653975 0.187908771234 -0.078108643508 0.990033288921 -0.117188423653 -0.197676811654 0.0998334166468 0.975170327202 5.0 4.0 3.0"
+    outputMatrix = "0.977150407022184 0.0993346653975306 0.187908771234184 5
+-0.078108643507977 0.990033288920621 -0.117188423653372 4
+-0.197676811654084 0.0998334166468282 0.975170327201816 3
+0 0 0 1"
+  }
+}
+module MatrixArithmetic {
+  internal  {
+    frame = "1085 1189 136 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "925 454 708 575"
+        sizeHint = "708 575"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = MatrixArithmetic
+    matrixA = "1 0 0 0
+0 1 0 0
+0 0 1 0
+0 0 0 1"
+    matrixB = "1 0 0 0
+0 1 0 0
+0 0 1 0
+0 0 0 1"
+    operation = Inverse
+    outputMatrixC = "1 0 0 0
+0 1 0 0
+0 0 1 0
+0 0 0 1"
+    outputDeterminant = 1
+    outputTrace = 4
+    outputVectorV = "0 0 0 0"
+    outputIsValid = TRUE
+    scalarValue = 0
+    inputVectorD = "0 0 0 0"
+    outputSumAbs = 4
+    outputIsOrthogonal = TRUE
+    outputScalarProducts = "0 0 0"
+  }
+}
+connections = ""
+networkModel = ""

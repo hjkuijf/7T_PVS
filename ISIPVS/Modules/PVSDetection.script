@@ -1,0 +1,126 @@
+
+Interface {
+  Inputs {
+  }
+
+  Outputs {
+  }
+
+  Parameters {
+    #include "$(MLAB_FMEstable_ReleaseMeVis)/Projects/AlgorithmModule/AlgorithmMacroModule/Modules/Parameters.mdl"
+    Field inSubjectDir {
+      type = String
+      comment = "Directory containing subject files"
+    }
+    Field inT1Filename {
+      type = String
+      comment = "Filename of T1 image"
+    }
+    Field inT2Filename {
+      type = String
+      comment = "Filename of T2 image"
+    }
+    Field inDoSPM {
+      type = Bool
+      comment = "Perform SPM step?"
+    }
+    Field inDoMNI {
+      type    = Bool
+      comment = "Perform MNI step?"
+    }
+    Field inDoPVSVesselness {
+      type    = Bool
+      comment = "Perform Vesselness step?"
+    }
+    Field inDoROIPlane {
+      type    = Bool
+      comment = "Perform ROI plane step?"
+    }
+    Field inDoSeedpoints {
+      type    = Bool
+      comment = "Perform seedpoint detection step?"
+    }
+    Field inDo3DTracking {
+      type    = Bool
+      comment = "Perform 3D tracking step?"
+    }
+    Field inDoFilterGraph {
+      type    = Bool
+      comment = "Perform inDoFilterGraph?"
+    }
+    Field inDoGraphToMNI {
+      type    = Bool
+      comment = "Perform inDoGraphToMNI?"
+    }
+    
+    Field loadPlane { type = Trigger }
+    Field savePlane { type = Trigger }
+  }
+}
+
+Commands {
+  source = $(LOCAL)/PVSDetection.py
+  initCommand = "*py: PVSDetection( ctx )*"
+}
+
+NetworkPanel {
+  #include "$(MLAB_FMEstable_ReleaseMeVis)/Projects/AlgorithmModule/MLAlgorithmModule/Modules/NetworkPanel.mdl"
+}
+
+Window {
+  expandY = True
+  
+  Category Main {
+    Box "Input" {
+      expandX = True
+      expandY = False
+      Field inSubjectDir { 
+        browseButton = True
+        browseMode = directory
+        title = "Subject dir:"
+      }
+      Field inT1Filename { title = "T1 filename:" }
+      Field inT2Filename { title = "T2 filename:" }
+      
+      Box Workflow {
+        CheckBox inDoSPM { title = "Do SPM" }
+        CheckBox inDoMNI { title = "Do MNI" }
+        CheckBox inDoPVSVesselness { title = "Do vesselness" }
+        CheckBox inDoROIPlane { title = "Do ROI plane" }
+        CheckBox inDoSeedpoints { title = "Do seedpoints" }
+        CheckBox inDo3DTracking { title = "Do 3D tracking" }
+        CheckBox inDoFilterGraph { title = "Do filter graph" }
+        CheckBox inDoGraphToMNI { title = "Do graph to MNI" }
+      }
+    }
+
+    #include "$(MLAB_FMEstable_ReleaseMeVis)/Projects/AlgorithmModule/AlgorithmMacroModule/Modules/Window.mdl"
+  }
+  Category Settings {
+    expandY = True
+    
+    Category Plane {
+      expandY = True
+      
+      Viewer OrthoView2D1.self {
+        expandY = True
+        type = SoRenderArea
+      }
+      Horizontal {
+        alignX = Left
+        
+        Field SoView2DPlane.plane {
+          edit          = False
+          fieldDragging = False
+        }
+        Button loadPlane { title = Load }
+        Button savePlane { title = Save }
+        Button {
+          command = "*py: ctx.field("SoView2DPlane.plane").setValue(0, 0, 1, 36.5) *"
+          title   = Reset
+        }
+      }
+    }
+    
+  }
+}

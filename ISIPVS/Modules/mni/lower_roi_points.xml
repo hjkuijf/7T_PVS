@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no" ?>
+<MeVis-XML-Data-v1.0>
+
+  <XMarkerList BaseType="XMarkerList" Version="1">
+    <_ListBase Version="0">
+      <hasPersistance>1</hasPersistance>
+      <currentIndex>1</currentIndex>
+    </_ListBase>
+    <ListSize>2</ListSize>
+    <ListItems>
+      <Item Version="0">
+        <_BaseItem Version="0">
+          <id>1</id>
+        </_BaseItem>
+        <pos>0 -22 -2 0 0 0</pos>
+        <type>10</type>
+      </Item>
+      <Item Version="0">
+        <_BaseItem Version="0">
+          <id>2</id>
+        </_BaseItem>
+        <pos>0 37 7 0 0 0</pos>
+        <type>20</type>
+      </Item>
+    </ListItems>
+  </XMarkerList>
+
+</MeVis-XML-Data-v1.0>

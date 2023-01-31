@@ -1,0 +1,60 @@
+Interface  {
+  Inputs  {
+    Field baseIn0 {
+      internalName = BaseBypass.baseIn0
+    }
+  }
+  Outputs {
+    Field outPointsOrig {
+      internalName = LoadOrig.outObject
+    }
+    Field outPointsMNI {
+      internalName = LoadMNI.outObject
+    }
+  }
+  Parameters {
+    #include "$(MLAB_FMEstable_ReleaseMeVis)/Projects/AlgorithmModule/AlgorithmMacroModule/Modules/Parameters.mdl"
+    
+    Field inOutputDir {
+      type = String
+    }
+    Field inDo { type = Bool value = True }
+    
+    Field inMNItoT1 { type = String }
+    Field inT1toT2 { type = String }
+  }
+}
+
+
+
+NetworkPanel {
+  #include "$(MLAB_FMEstable_ReleaseMeVis)/Projects/AlgorithmModule/MLAlgorithmModule/Modules/NetworkPanel.mdl"
+}
+
+Commands {
+  source      = $(LOCAL_BASENAME).py
+  initCommand = "*py: GraphToMNI( ctx )*"  
+}
+
+Window {
+  Category {
+    Box "Input" {
+      Field inOutputDir {
+        browseButton = True
+        browseMode   = directory
+        title        = "Output dir:"
+      }
+      
+      CheckBox inDo {
+        title   = "Do"
+        tooltip = "When false, load data from cache"
+      }
+      
+      Field inMNItoT1 { title = "MNI to T1"}
+      Field inT1toT2 { title = "T1 to T2" }      
+    }
+    
+    Box "Output" { }
+    #include "$(MLAB_FMEstable_ReleaseMeVis)/Projects/AlgorithmModule/AlgorithmMacroModule/Modules/Window.mdl"
+  }
+}

@@ -1,0 +1,73 @@
+Interface  {
+  Inputs {
+    Field inT2 { internalName = T2.input0 }
+    Field inWM { internalName = WM.input0 }
+    Field inT1atT2 { internalName = T1atT2.input0 }
+    Field inVesselness { internalName = Vesselness.input0 }
+  }
+  Outputs {
+    Field outROIT2 { internalName = T2Load.output0 }
+    Field outROIT1 { internalName = T1Load.output0 }
+    Field outROIVesselness { internalName = VesselnessLoad.output0 }
+    Field outROIMask { internalName = MaskLoad.output0 }
+  }
+  Parameters {
+    #include "$(MLAB_FMEstable_ReleaseMeVis)/Projects/AlgorithmModule/AlgorithmMacroModule/Modules/Parameters.mdl"
+    
+    Field inOutputDir {
+      type = String
+    }
+    Field inT1_to_T2 { type = String }
+    Field inMNI_to_T1 { type = String }   
+    
+    Field inDo { type = Bool value = True }
+    
+    Field inZ { type = Int value = 115 }
+    
+    Field inPlane { type = Plane }
+    Field outPlane { type = Plane }
+  }
+}
+NetworkPanel {
+  #include "$(MLAB_FMEstable_ReleaseMeVis)/Projects/AlgorithmModule/MLAlgorithmModule/Modules/NetworkPanel.mdl"
+}
+
+
+Commands {
+  source      = $(LOCAL_BASENAME).py
+  initCommand = "*py: ROIPlane( ctx )*"
+  
+}
+
+Description {
+  Field inZ {
+    min = 0
+    max = 192
+  }
+}
+
+Window {
+  Category {
+    Box "Input" {
+      Field inOutputDir {
+        browseButton = True
+        browseMode   = directory
+        title        = "Output dir:"
+      }
+      
+      Field inMNI_to_T1 {}
+      Field inT1_to_T2 {}
+      Field inPlane {  }
+      
+      CheckBox inDo {
+        title   = "Do"
+        tooltip = "When false, load data from cache"
+      }
+    }
+    
+    Box "Output" {
+      Field outPlane { edit = False }
+    }
+    #include "$(MLAB_FMEstable_ReleaseMeVis)/Projects/AlgorithmModule/AlgorithmMacroModule/Modules/Window.mdl"
+  }
+}

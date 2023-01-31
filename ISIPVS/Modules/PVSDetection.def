@@ -1,0 +1,8 @@
+MacroModule PVSDetection {
+  author             = "Hugo"
+  comment            = "Detection of perivascular spaces (PVS, also known as Virchow Robin spaces) on 7T brain MR images"
+  keywords           = "pvs"
+  seeAlso            = ""
+  externalDefinition = "$(LOCAL)/PVSDetection.script"
+  associatedTests    = "PVSDetectionTest"
+}

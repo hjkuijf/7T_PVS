@@ -1,0 +1,218 @@
+// MDL v1 utf8
+network  {
+  watchlist = ""
+}
+module LoadBase {
+  internal  {
+    frame = "1093 -1115 120 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = LoadMNI
+    autoUpdate = AutoClear
+    nodeName = ""
+    filename = D:/data/j/00004-16032011/GraphToMNI/mni_graph.xml
+    useBaseDir = FALSE
+    baseDir = ""
+    format = Auto
+  }
+}
+module SaveBase {
+  internal  {
+    frame = "1481 -867 96 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "693 522 548 216"
+        sizeHint = "548 216"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SaveOrig
+    nodeName = XMarkerList
+    filename = object
+    useBaseDir = FALSE
+    baseDir = ""
+    format = XML
+    autoSave = FALSE
+    allowOverwrite = TRUE
+  }
+}
+module SaveBase {
+  internal  {
+    frame = "1317 -1115 88 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = SaveMNI
+    nodeName = XMarkerList
+    filename = object
+    useBaseDir = FALSE
+    baseDir = ""
+    format = XML
+    autoSave = FALSE
+    allowOverwrite = TRUE
+  }
+}
+module XMarkerListContainer {
+  internal  {
+    frame = "1269 -747 152 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = XMarkerListContainer
+    listString = ""
+    index = 0
+    persistent = FALSE
+    listStringEnable = FALSE
+    applySelect = FALSE
+    name = ""
+    newName = ""
+    overflowMode = None
+    maxSize = 0
+    useInsertTemplate = FALSE
+    posXYZ = "0 0 0"
+    posC = 0
+    posT = 0
+    posU = 0
+    vecXYZ = "0 0 0"
+    type = 0
+    newPosXYZ = "0 0 0"
+    newPosC = 0
+    newPosT = 0
+    newPosU = 0
+    newVecXYZ = "0 0 0"
+    newType = 0
+  }
+}
+module Transformix {
+  internal  {
+    frame = "1241 -995 192 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "822 423 349 414"
+        sizeHint = "291 414"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Transformix1
+    tranformixExecutable = "D:/MeVisLab/ISI/Registration\\bin\\elastix\\windows64_v4.7\\transformix.exe"
+    workingDirectory = C:/Users/hugo/AppData/Local/Temp
+    transformationFile = "D:/data/j/00004-16032011/MNI\\MNI_to_T1.txt"
+    autoUpdateTransformationFile = FALSE
+    createImage = FALSE
+    createDeformationField = FALSE
+    createJacobianField = FALSE
+    createJacobianMatrixField = FALSE
+    isDeformationFieldPossible = FALSE
+    succeeded = TRUE
+    logToDebugOutput = TRUE
+  }
+}
+module Transformix {
+  internal  {
+    frame = "1249 -867 192 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "463 310 643 414"
+        sizeHint = "291 414"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Transformix
+    tranformixExecutable = "D:/MeVisLab/ISI/Registration\\bin\\elastix\\windows64_v4.7\\transformix.exe"
+    workingDirectory = C:/Users/hugo/AppData/Local/Temp
+    transformationFile = "D:/data/j/00004-16032011/MNI\\T1_to_T2.txt"
+    autoUpdateTransformationFile = FALSE
+    createImage = FALSE
+    createDeformationField = FALSE
+    createJacobianField = FALSE
+    createJacobianMatrixField = FALSE
+    isDeformationFieldPossible = FALSE
+    succeeded = TRUE
+    logToDebugOutput = TRUE
+  }
+}
+module Elastix {
+  internal  {
+    frame = "925 -979 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "220 317 434 808"
+        sizeHint = "434 808"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Elastix
+    temporaryDirectory = C:/Users/hugo/AppData/Local/Temp
+    parameterFile1 = ""
+    parameterFile2 = ""
+    parameterFile3 = ""
+    otherArguments = ""
+    status = initialized
+    elastixExecutable = "D:/MeVisLab/ISI/Registration\\bin\\elastix\\windows64_v4.7\\elastix.exe"
+    transformixExecutable = "D:/MeVisLab/ISI/Registration\\bin\\elastix\\windows64_v4.7\\transformix.exe"
+    elastixOutput = ""
+    removeIntermediateFiles = TRUE
+    sendOutputToLogWindowTo = TRUE
+    createDeformationField = TRUE
+    createJacobianImage = TRUE
+    createJacobianMatrixImage = TRUE
+    numberOfThreads = 2
+    initialTransformationFile = ""
+    outputImageDataType = float
+    selectedPreset = windows64_v4.7
+    presets = ,linux64_v4.6,windows32_v4.7,windows64_v4.7
+    logToDebugOutput = TRUE
+    correctSubVoxelShift = FALSE
+  }
+}
+module BaseBypass {
+  internal  {
+    frame = "1121 -627 128 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = BaseBypass
+    bypass = TRUE
+    noBypass = FALSE
+  }
+}
+module LoadBase {
+  internal  {
+    frame = "949 -1115 120 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = LoadOrig
+    autoUpdate = AutoClear
+    nodeName = ""
+    filename = D:/data/j/00004-16032011/GraphToMNI/mni_graph.xml
+    useBaseDir = FALSE
+    baseDir = ""
+    format = Auto
+  }
+}
+connections  {
+  SaveOrig.inObject = XMarkerListContainer.outXMarkerList
+  SaveMNI.inObject = Transformix1.outputXMarkerList
+  Transformix1.inputXMarkerList = Transformix.outputXMarkerList
+  Transformix1.tranformixExecutable = Elastix.transformixExecutable
+  Transformix.inputXMarkerList = XMarkerListContainer.outXMarkerList
+  Transformix.tranformixExecutable = Elastix.transformixExecutable
+}
+networkModel = ""

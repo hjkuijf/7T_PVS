@@ -1,0 +1,115 @@
+// MDL v1 utf8
+network  {
+  watchlist = ""
+}
+module XMarkerAtIndex {
+  internal  {
+    frame = "1653 -867 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1007 463 480 381"
+        sizeHint = "459 381"
+        wasOpen = yes
+      }
+    }
+  }
+  fields  {
+    instanceName = XMarkerAtIndex
+    index = 0
+    autoUpdate = TRUE
+  }
+}
+module TubularTracking {
+  internal  {
+    frame = "1501 -995 152 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "100 248 305 571"
+        sizeHint = "305 571"
+        wasOpen = yes
+      }
+    }
+  }
+  fields  {
+    instanceName = TubularTracking
+    minRadius = 0.15
+    maxRadius = 0.7
+    initRadius = 2
+    useInitRadius = FALSE
+    nbrOfSearchAngles = 2
+    maxAngle = 1
+    pruningThreshold = 2
+    terminationThreshold = 5
+    maxNbrSteps = 100
+    maxLength = 50
+    searchDepth = 2
+    minBranchingDistance = 5
+    stepLengthFactor = 1
+    windowSizeFactor = 3
+    allowBranching = FALSE
+    growBidirectional = TRUE
+    useMultipleHypotheses = TRUE
+    toggleMaxSteps = FALSE
+    toggleMaxLength = TRUE
+  }
+}
+module LoadBase {
+  internal  {
+    frame = "1685 -1107 120 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = LoadBase
+    autoUpdate = AutoClear
+    nodeName = ""
+    filename = object
+    useBaseDir = FALSE
+    baseDir = ""
+    format = Auto
+  }
+}
+module Bypass {
+  internal  {
+    frame = "1549 -743 104 64"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = Mask
+    noBypass = FALSE
+  }
+}
+module Bypass {
+  internal  {
+    frame = "1389 -743 120 64"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = Vesselness
+    noBypass = FALSE
+  }
+}
+module BaseBypass {
+  internal  {
+    frame = "1697 -743 128 64"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = Seedpoints
+    bypass = TRUE
+    noBypass = FALSE
+  }
+}
+connections  {
+  XMarkerAtIndex.inputXMarkerList = Seedpoints.baseOut0
+  TubularTracking.input0 = Vesselness.output0
+  TubularTracking.input1 = Mask.output0
+  TubularTracking.inputInitPoints = XMarkerAtIndex.outputXMarkerList
+}
+networkModel = ""

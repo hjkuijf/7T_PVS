@@ -1,0 +1,575 @@
+// MDL v1 utf8
+network  {
+  watchlist = ""
+}
+module Morphology {
+  internal  {
+    frame = "1529 -155 96 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "821 382 293 497"
+        sizeHint = "293 497"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Morphology
+    borderHandling = PadSrcClamp
+    fillValue = 0
+    referenceExtentMode = Overlap
+    filterMode = Erosion
+    kernelX = 3
+    kernelY = 3
+    kernelZ = 1
+    kernelC = 1
+    kernelT = 1
+    kernelU = 1
+    makeSpherical = FALSE
+    intervalMinOfFilteredVoxels = 0
+    intervalMaxOfFilteredVoxels = 1024
+    useIntervalOfFilteredVoxels = FALSE
+    intervalMinOfVoxelsForFiltering = 0
+    intervalMaxOfVoxelsForFiltering = 1024
+    useIntervalOfVoxelsForFiltering = FALSE
+    externalKernel = ""
+    useExternalKernel = FALSE
+  }
+}
+module CloseGap {
+  internal  {
+    frame = "1541 -27 88 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1249 659 293 438"
+        sizeHint = "293 438"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = CloseGap
+    borderHandling = PadSrcClamp
+    fillValue = 0
+    referenceExtentMode = Overlap
+    kernelX = 5
+    kernelY = 5
+    kernelZ = 5
+    makeSpherical = FALSE
+    intervalMinOfFilteredVoxels = 0
+    intervalMaxOfFilteredVoxels = 1024
+    useIntervalOfFilteredVoxels = FALSE
+    intervalMinOfVoxelsForFiltering = 0
+    intervalMaxOfVoxelsForFiltering = 1024
+    useIntervalOfVoxelsForFiltering = FALSE
+    externalKernel = ""
+    useExternalKernel = FALSE
+    filterMode = CloseGap
+    internalKernel = CloseGap
+    sensitivity = 25
+  }
+}
+module Threshold {
+  internal  {
+    frame = "1541 85 88 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "336 489 278 294"
+        sizeHint = "248 294"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Threshold
+    threshold = 0.2
+    relativeThreshold = FALSE
+    comparisonOperator = Greater
+    conditionTrueWriteValue = UserDef
+    userConditionTrueValue = 1
+    conditionFalseWriteValue = UserDef
+    userConditionFalseValue = 0
+  }
+}
+module MLImageFormatSave {
+  internal  {
+    frame = "949 -31 152 64"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "801 424 332 410"
+        sizeHint = "332 410"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = T1_at_T2_Save
+    compression = BZip2
+    dblHintVal0 = 0
+    intHintVal0 = 0
+    strHintVal0 = FALSE
+    boolHintVal0 = FALSE
+    dblHintVal1 = 0
+    intHintVal1 = 0
+    strHintVal1 = ""
+    boolHintVal1 = FALSE
+    dblHintVal2 = 0
+    intHintVal2 = 0
+    strHintVal2 = ""
+    boolHintVal2 = FALSE
+    dblHintVal3 = 0
+    intHintVal3 = 0
+    strHintVal3 = ""
+    boolHintVal3 = FALSE
+    dblHintVal4 = 0
+    intHintVal4 = 0
+    strHintVal4 = ""
+    boolHintVal4 = FALSE
+    dblHintVal5 = 0
+    intHintVal5 = 0
+    strHintVal5 = ""
+    boolHintVal5 = FALSE
+    dblHintVal6 = 0
+    intHintVal6 = 0
+    strHintVal6 = ""
+    boolHintVal6 = FALSE
+    dblHintVal7 = 0
+    intHintVal7 = 0
+    strHintVal7 = ""
+    boolHintVal7 = FALSE
+    dblHintVal8 = 0
+    intHintVal8 = 0
+    strHintVal8 = ""
+    boolHintVal8 = FALSE
+    dblHintVal9 = 0
+    intHintVal9 = 0
+    strHintVal9 = ""
+    boolHintVal9 = FALSE
+    updateMode = AutoUpdate
+    userTag00 = ""
+    userTag01 = ""
+    userTag02 = ""
+    userTag03 = ""
+    userTag04 = ""
+    userTag05 = ""
+    userTag06 = ""
+    userTag07 = ""
+    userTag08 = ""
+    userTag09 = ""
+    regionOffset = "0 0 0 0 0 0"
+    suppressWorldPos = FALSE
+    fileName = X:/j/10035-29062010/MNI/T1_at_T2.mlimage
+  }
+}
+module MLImageFormatLoad {
+  internal  {
+    frame = "1077 -263 152 64"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "742 424 450 411"
+        sizeHint = "450 411"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = T1_at_T2
+    updateMode = AutoUpdate
+    regionOffset = "0 0 0 0 0 0"
+    suppressWorldPos = FALSE
+    applyMode = AutoUpdate
+    suppressCheckSumTests = FALSE
+    fileName = ""
+  }
+}
+module MLImageFormatLoad {
+  internal  {
+    frame = "877 -263 152 64"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "901 661 685 411"
+        sizeHint = "450 411"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = OutWM
+    updateMode = AutoUpdate
+    regionOffset = "0 0 0 0 0 0"
+    suppressWorldPos = FALSE
+    applyMode = AutoUpdate
+    suppressCheckSumTests = FALSE
+    fileName = ""
+  }
+}
+module Bypass {
+  internal  {
+    frame = "1549 201 72 64"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = WM
+    noBypass = FALSE
+  }
+}
+module MLImageFormatSave {
+  internal  {
+    frame = "1493 -379 152 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "801 424 502 410"
+        sizeHint = "332 410"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = MLImageFormatSave
+    compression = BZip2
+    dblHintVal0 = 0
+    intHintVal0 = 0
+    strHintVal0 = FALSE
+    boolHintVal0 = FALSE
+    dblHintVal1 = 0
+    intHintVal1 = 0
+    strHintVal1 = ""
+    boolHintVal1 = FALSE
+    dblHintVal2 = 0
+    intHintVal2 = 0
+    strHintVal2 = ""
+    boolHintVal2 = FALSE
+    dblHintVal3 = 0
+    intHintVal3 = 0
+    strHintVal3 = ""
+    boolHintVal3 = FALSE
+    dblHintVal4 = 0
+    intHintVal4 = 0
+    strHintVal4 = ""
+    boolHintVal4 = FALSE
+    dblHintVal5 = 0
+    intHintVal5 = 0
+    strHintVal5 = ""
+    boolHintVal5 = FALSE
+    dblHintVal6 = 0
+    intHintVal6 = 0
+    strHintVal6 = ""
+    boolHintVal6 = FALSE
+    dblHintVal7 = 0
+    intHintVal7 = 0
+    strHintVal7 = ""
+    boolHintVal7 = FALSE
+    dblHintVal8 = 0
+    intHintVal8 = 0
+    strHintVal8 = ""
+    boolHintVal8 = FALSE
+    dblHintVal9 = 0
+    intHintVal9 = 0
+    strHintVal9 = ""
+    boolHintVal9 = FALSE
+    updateMode = AutoUpdate
+    userTag00 = ""
+    userTag01 = ""
+    userTag02 = ""
+    userTag03 = ""
+    userTag04 = ""
+    userTag05 = ""
+    userTag06 = ""
+    userTag07 = ""
+    userTag08 = ""
+    userTag09 = ""
+    regionOffset = "0 0 0 0 0 0"
+    suppressWorldPos = FALSE
+    fileName = X:/j/10035-29062010/MNI/WM.mlimage
+  }
+}
+module Transformix {
+  internal  {
+    frame = "1481 -267 192 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "930 403 870 414"
+        sizeHint = "291 414"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Transformix1
+    tranformixExecutable = "D:/MeVisLab/ISI/Registration\\bin\\elastix\\windows64_v4.7\\transformix.exe"
+    workingDirectory = X:/j/10035-29062010/MNI/temp/t12t2
+    transformationFile = ""
+    autoUpdateTransformationFile = FALSE
+    createImage = TRUE
+    createDeformationField = FALSE
+    createJacobianField = FALSE
+    createJacobianMatrixField = FALSE
+    isDeformationFieldPossible = FALSE
+    succeeded = TRUE
+    logToDebugOutput = TRUE
+  }
+}
+module Elastix {
+  internal  {
+    frame = "1285 149 120 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "65 299 993 808"
+        sizeHint = "434 808"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = MNI_to_T1
+    temporaryDirectory = X:/j/10035-29062010/MNI/temp/mni2t1
+    parameterFile1 = D:/MeVisLab/ISI/Neuro/Projects/ISIPVS/Modules/mni/to_mni.txt
+    parameterFile2 = D:/MeVisLab/ISI/Neuro/Projects/ISIPVS/Modules/mni/bspline_mni_to_ad.txt
+    parameterFile3 = ""
+    otherArguments = ""
+    status = initialized
+    elastixExecutable = "D:/MeVisLab/ISI/Registration\\bin\\elastix\\windows64_v4.7\\elastix.exe"
+    transformixExecutable = "D:/MeVisLab/ISI/Registration\\bin\\elastix\\windows64_v4.7\\transformix.exe"
+    elastixOutput = ""
+    removeIntermediateFiles = TRUE
+    sendOutputToLogWindowTo = FALSE
+    createDeformationField = FALSE
+    createJacobianImage = FALSE
+    createJacobianMatrixImage = FALSE
+    numberOfThreads = 4
+    initialTransformationFile = ""
+    outputImageDataType = float
+    selectedPreset = windows64_v4.7
+    presets = ,linux64_v4.6,windows32_v4.7,windows64_v4.7
+    logToDebugOutput = TRUE
+    correctSubVoxelShift = FALSE
+  }
+}
+module LocalPath {
+  internal  {
+    frame = "1137 -39 128 64"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "71 163 420 212"
+        sizeHint = "420 212"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = BSplineFilename
+    localName = $(NETWORK)/mni/bspline_mni_to_ad.txt
+    checkIfFileExists = TRUE
+    browseType = file
+  }
+}
+module LocalPath {
+  internal  {
+    frame = "1145 57 112 64"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "71 163 420 212"
+        sizeHint = "420 212"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = AffineFilename
+    localName = $(NETWORK)/mni/to_mni.txt
+    checkIfFileExists = TRUE
+    browseType = file
+  }
+}
+module Elastix {
+  internal  {
+    frame = "981 169 120 64"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "166 238 434 808"
+        sizeHint = "434 808"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "717 329 736 699"
+        sizeHint = "260 223"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = T1_to_E2
+    temporaryDirectory = X:/j/10035-29062010/MNI/temp/t12t2
+    parameterFile1 = D:/MeVisLab/ISI/Neuro/Projects/ISIPVS/Modules/mni/to_mni.txt
+    parameterFile2 = ""
+    parameterFile3 = ""
+    otherArguments = ""
+    status = initialized
+    elastixExecutable = "D:/MeVisLab/ISI/Registration\\bin\\elastix\\windows64_v4.7\\elastix.exe"
+    transformixExecutable = "D:/MeVisLab/ISI/Registration\\bin\\elastix\\windows64_v4.7\\transformix.exe"
+    elastixOutput = ""
+    removeIntermediateFiles = TRUE
+    sendOutputToLogWindowTo = FALSE
+    createDeformationField = TRUE
+    createJacobianImage = FALSE
+    createJacobianMatrixImage = FALSE
+    numberOfThreads = 2
+    initialTransformationFile = ""
+    outputImageDataType = float
+    selectedPreset = windows64_v4.7
+    presets = ,linux64_v4.6,windows32_v4.7,windows64_v4.7
+    logToDebugOutput = TRUE
+    correctSubVoxelShift = FALSE
+  }
+}
+module itkImageFileReader {
+  internal  {
+    frame = "1333 293 136 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "482 401 649 395"
+        sizeHint = "299 395"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = MNI_T1
+    fileDataType = float
+    autoDetermineDataType = TRUE
+    correctSubVoxelShift = TRUE
+    fileDimension = 3
+    info = "Loading okay."
+    numDims = 3
+    fileType = TypeNotApplicable
+    componentType = float
+    pixelType = SCALAR
+    loaderType = NiftiImageIO
+    outputMetaDataStr = "ITK_FileNotes : mnc2nii mni_icbm152_nlin_sym_09c/mni_icbm152_t1_tal_nlin_sym_09c.mnc mni_icbm15
+aux_file : 
+bitpix : 16
+cal_max : 100
+cal_min : 0
+datatype : 4
+descrip : mnc2nii mni_icbm152_nlin_sym_09c/mni_icbm152_t1_tal_nlin_sym_09c.mnc mni_icbm15
+dim[0] : 3
+dim[1] : 193
+dim[2] : 229
+dim[3] : 193
+dim[4] : 1
+dim[5] : 1
+dim[6] : 0
+dim[7] : 0
+dim_info : 
+intent_code : 0
+intent_name : 
+intent_p1 : 0
+intent_p2 : 0
+intent_p3 : 0
+pixdim[0] : 0
+pixdim[1] : 1
+pixdim[2] : 1
+pixdim[3] : 1
+pixdim[4] : 0
+pixdim[5] : 1
+pixdim[6] : 0
+pixdim[7] : 0
+qform_code : 0
+qoffset_x : 0
+qoffset_y : 0
+qoffset_z : 0
+quatern_b : 0
+quatern_c : 0
+quatern_d : 0
+scl_inter : 49.2854
+scl_slope : 0.00150375
+sform_code : 4
+slice_code : 
+slice_duration : 0
+slice_end : 0
+slice_start : 0
+srow_x : 1 0 0 -96
+srow_y : 0 1 0 -132
+srow_z : 0 0 1 -78
+toffset : 0
+vox_offset : 352
+xyzt_units : 
+
+"
+    suppressErrorPosting = FALSE
+    unresolvedFileName = $(NETWORK)/mni/mni_icbm152_t1_tal_nlin_sym_09c.nii
+  }
+}
+module LocalPath {
+  internal  {
+    frame = "1337 385 128 64"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "840 746 420 212"
+        sizeHint = "420 212"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = MNI_T1Filename
+    localName = $(NETWORK)/mni/mni_icbm152_t1_tal_nlin_sym_09c.nii
+    checkIfFileExists = TRUE
+    browseType = file
+  }
+}
+module Bypass {
+  internal  {
+    frame = "1021 409 72 64"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = E2
+    noBypass = FALSE
+  }
+}
+module Bypass {
+  internal  {
+    frame = "1157 417 72 64"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = T1
+    noBypass = FALSE
+  }
+}
+connections  {
+  Morphology.input0 = CloseGap.output0
+  CloseGap.input0 = Threshold.output0
+  Threshold.input0 = WM.output0
+  T1_at_T2_Save.input0 = T1_to_E2.transformedImage
+  MLImageFormatSave.input0 = Transformix1.outputImage
+  Transformix1.input0 = Morphology.output0
+  Transformix1.tranformixExecutable = T1_to_E2.transformixExecutable
+  Transformix1.transformationFile = T1_to_E2.resultingTransformationFileCopy
+  MNI_to_T1.fixedImage = T1.output0
+  MNI_to_T1.movingImage = MNI_T1.output0
+  MNI_to_T1.parameterFile1 = AffineFilename.trueName
+  MNI_to_T1.parameterFile2 = BSplineFilename.trueName
+  T1_to_E2.fixedImage = E2.output0
+  T1_to_E2.movingImage = T1.output0
+  T1_to_E2.parameterFile1 = AffineFilename.trueName
+  MNI_T1.unresolvedFileName = MNI_T1Filename.trueName
+}
+networkModel = ""

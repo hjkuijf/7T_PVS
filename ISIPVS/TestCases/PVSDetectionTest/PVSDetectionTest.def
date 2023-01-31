@@ -1,0 +1,8 @@
+// **InsertLicense** code
+
+FunctionalTestCase PVSDetectionTest {
+  author = "Hugo"
+  comment = ""
+  timeout = 60
+  scriptFile = "$(LOCAL)/PVSDetectionTest.py"
+}

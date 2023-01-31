@@ -1,0 +1,54 @@
+Interface  {
+  Inputs {
+    Field inT1 {
+      internalName = Bypass.input0
+    }
+  }
+  Outputs {
+    Field outC1 { internalName = c1.output0 }
+    Field outC2 { internalName = c2.output0 }
+    Field outC3 { internalName = c3.output0 }
+    Field outC4 { internalName = c4.output0 }
+    Field outC5 { internalName = c5.output0 }
+    Field outC6 { internalName = c6.output0 }
+  }
+  Parameters {
+    #include "$(MLAB_FMEstable_ReleaseMeVis)/Projects/AlgorithmModule/AlgorithmMacroModule/Modules/Parameters.mdl"
+    
+    Field inOutputDir {
+      type = String
+    }
+    
+    Field inDo {
+      type = Bool
+      value = True
+    }
+  }  
+}
+
+Commands {
+  source      = $(LOCAL_BASENAME).py  
+  initCommand = "*py: SPM( ctx )*"
+}
+
+NetworkPanel {
+  #include "$(MLAB_FMEstable_ReleaseMeVis)/Projects/AlgorithmModule/MLAlgorithmModule/Modules/NetworkPanel.mdl"
+}
+
+Window {
+  Category {
+    Box "Input" {
+      Field inOutputDir {
+        browseButton = True
+        browseMode   = directory
+        title = "Output dir:"
+      }
+      
+      CheckBox inDo {
+        title = "Do"
+        tooltip = "When false, load data from cache"
+      }
+    }
+    #include "$(MLAB_FMEstable_ReleaseMeVis)/Projects/AlgorithmModule/AlgorithmMacroModule/Modules/Window.mdl"
+  }
+}

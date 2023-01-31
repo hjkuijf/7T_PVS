@@ -1,0 +1,52 @@
+//----------------------------------------------------------------------------------
+//! Macro module ReadElastixTransformParameterFile
+/*!
+// \file    ReadElastixTransformParameterFile.script
+// \author  Marijn van Stralen
+// \date    2014-01-10
+//
+// 
+*/
+//----------------------------------------------------------------------------------
+
+// write your script here!
+Interface {
+  Parameters {
+    Field filename { type = String value = "/Users/marijnvanstralen/Temp/Reg100/TransformParameters.0_Parallel_000_023.txt"}
+    Field read {type = Trigger}
+    Field matrix { internalName = MatrixArithmetic.matrixA }
+    Field inverseMatrix { internalName = MatrixArithmetic.outputMatrixC }
+    Field autoRead { type = Bool value = False}
+    Field useCenter { type = Bool value = True }
+    Field recursiveRead { type = Bool value = True }
+  }
+}
+
+Commands {
+  source = $(LOCAL)/ReadElastixTransformParameterFile.py
+  
+  initCommand = init
+  
+  FieldListener read { command = readFile }
+  FieldListener {
+    listenField = autoRead
+    listenField = filename
+    listenField = useCenter
+    listenField = recursiveRead
+    command = autoRead
+  }
+}
+
+Window {
+  style = _default
+  Vertical {
+    Field filename { browseButton = True browseMode = open browseFilter = "\*.txt" }
+    Field read { }
+    Field autoRead {}
+    Field useCenter {}
+    Field recursiveRead {}
+    TextView matrix { edit = False }
+    TextView inverseMatrix {edit = False}
+  }
+  
+}

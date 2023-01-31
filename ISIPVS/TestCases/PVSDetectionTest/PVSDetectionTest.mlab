@@ -1,0 +1,17 @@
+// MDL v1 utf8
+network {
+  watchlist = ""
+}
+module PVSDetection {
+  internal  {
+    frame = "0 0 0 0"
+    moduleGroupName = ""
+  }
+  fields {
+    instanceName = PVSDetection
+    onInputChangeBehavior = Clear
+  }
+}
+connections {
+}
+networkModel = ""

@@ -1,0 +1,109 @@
+// MDL v1 utf8
+network  {
+  watchlist = ""
+}
+module SaveBase {
+  internal  {
+    frame = "1101 -903 136 64"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = SaveTrackedPoints
+    nodeName = XMarkerList
+    filename = X:/j/10035-29062010/3DTracking/trackedPoints.xml
+    useBaseDir = FALSE
+    baseDir = ""
+    format = XML
+    autoSave = FALSE
+    allowOverwrite = TRUE
+  }
+}
+module SaveBase {
+  internal  {
+    frame = "937 -903 96 64"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = SaveGraph
+    nodeName = Graph
+    filename = X:/j/10035-29062010/3DTracking/graph.xml
+    useBaseDir = FALSE
+    baseDir = ""
+    format = XML
+    autoSave = FALSE
+    allowOverwrite = TRUE
+  }
+}
+module LoadBase {
+  internal  {
+    frame = "1085 -1007 168 64"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = LoadTrackedPoints
+    autoUpdate = AutoClear
+    nodeName = ""
+    filename = X:/j/10035-29062010/3DTracking/trackedPoints.xml
+    useBaseDir = FALSE
+    baseDir = ""
+    format = Auto
+  }
+}
+module LoadBase {
+  internal  {
+    frame = "925 -1007 120 64"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = LoadGraph
+    autoUpdate = AutoClear
+    nodeName = ""
+    filename = X:/j/10035-29062010/3DTracking/graph.xml
+    useBaseDir = FALSE
+    baseDir = ""
+    format = Auto
+  }
+}
+module TubularTracking {
+  internal  {
+    frame = "997 -747 152 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "274 436 305 571"
+        sizeHint = "305 571"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = TubularTracking
+    minRadius = 0.15
+    maxRadius = 0.7
+    initRadius = 2
+    useInitRadius = FALSE
+    nbrOfSearchAngles = 2
+    maxAngle = 1
+    pruningThreshold = 2
+    terminationThreshold = 5
+    maxNbrSteps = 100
+    maxLength = 50
+    searchDepth = 2
+    minBranchingDistance = 5
+    stepLengthFactor = 1
+    windowSizeFactor = 3
+    allowBranching = FALSE
+    growBidirectional = TRUE
+    useMultipleHypotheses = TRUE
+    toggleMaxSteps = FALSE
+    toggleMaxLength = TRUE
+  }
+}
+connections  {
+  SaveTrackedPoints.inObject = TubularTracking.outputTrackedPoints
+  SaveGraph.inObject = TubularTracking.outputGraph
+}
+networkModel = ""

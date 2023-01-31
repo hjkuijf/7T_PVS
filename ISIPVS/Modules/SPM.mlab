@@ -1,0 +1,208 @@
+// MDL v1 utf8
+network  {
+  watchlist = ""
+}
+module itkImageFileReader {
+  internal  {
+    frame = "1279 174 136 64"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "818 432 299 395"
+        sizeHint = "299 395"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = c6
+    fileDataType = int16
+    autoDetermineDataType = TRUE
+    correctSubVoxelShift = TRUE
+    fileDimension = 3
+    info = "Invalid path"
+    numDims = 0
+    fileType = TypeNotApplicable
+    componentType = ""
+    pixelType = UNKNOWNPIXELTYPE
+    loaderType = ""
+    outputMetaDataStr = ""
+    unresolvedFileName = ""
+  }
+}
+module itkImageFileReader {
+  internal  {
+    frame = "1117 174 136 64"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "818 432 299 395"
+        sizeHint = "299 395"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = c5
+    fileDataType = int16
+    autoDetermineDataType = TRUE
+    correctSubVoxelShift = TRUE
+    fileDimension = 3
+    info = "Invalid path"
+    numDims = 0
+    fileType = TypeNotApplicable
+    componentType = ""
+    pixelType = UNKNOWNPIXELTYPE
+    loaderType = ""
+    outputMetaDataStr = ""
+    unresolvedFileName = ""
+  }
+}
+module itkImageFileReader {
+  internal  {
+    frame = "955 174 136 64"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "818 432 299 395"
+        sizeHint = "299 395"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = c4
+    fileDataType = int16
+    autoDetermineDataType = TRUE
+    correctSubVoxelShift = TRUE
+    fileDimension = 3
+    info = "Invalid path"
+    numDims = 0
+    fileType = TypeNotApplicable
+    componentType = ""
+    pixelType = UNKNOWNPIXELTYPE
+    loaderType = ""
+    outputMetaDataStr = ""
+    unresolvedFileName = ""
+  }
+}
+module itkImageFileReader {
+  internal  {
+    frame = "793 174 136 64"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "818 432 299 395"
+        sizeHint = "299 395"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = c3
+    fileDataType = int16
+    autoDetermineDataType = TRUE
+    correctSubVoxelShift = TRUE
+    fileDimension = 3
+    info = "Invalid path"
+    numDims = 0
+    fileType = TypeNotApplicable
+    componentType = ""
+    pixelType = UNKNOWNPIXELTYPE
+    loaderType = ""
+    outputMetaDataStr = ""
+    unresolvedFileName = ""
+  }
+}
+module itkImageFileReader {
+  internal  {
+    frame = "631 174 136 64"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "818 432 299 395"
+        sizeHint = "299 395"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = c2
+    fileDataType = int16
+    autoDetermineDataType = TRUE
+    correctSubVoxelShift = TRUE
+    fileDimension = 3
+    info = "Invalid path"
+    numDims = 0
+    fileType = TypeNotApplicable
+    componentType = ""
+    pixelType = UNKNOWNPIXELTYPE
+    loaderType = ""
+    outputMetaDataStr = ""
+    unresolvedFileName = ""
+  }
+}
+module itkImageFileReader {
+  internal  {
+    frame = "469 174 136 64"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "818 432 299 395"
+        sizeHint = "299 395"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = c1
+    fileDataType = int16
+    autoDetermineDataType = TRUE
+    correctSubVoxelShift = TRUE
+    fileDimension = 3
+    info = "Invalid path"
+    numDims = 0
+    fileType = TypeNotApplicable
+    componentType = ""
+    pixelType = UNKNOWNPIXELTYPE
+    loaderType = ""
+    outputMetaDataStr = ""
+    unresolvedFileName = ""
+  }
+}
+module Bypass {
+  internal  {
+    frame = "909 437 72 56"
+    moduleGroupName = ""
+  }
+  fields  {
+    instanceName = Bypass
+    noBypass = FALSE
+  }
+}
+module itkImageFileWriter {
+  internal  {
+    frame = "881 313 128 64"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "839 428 307 403"
+        sizeHint = "256 403"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = T1Save
+    useCompression = FALSE
+    correctSubVoxelShift = TRUE
+    forceDirectionCosineWrite = TRUE
+    outputVoxelType = Automatic
+    info = "File saved successfully"
+    unresolvedFileName = ""
+  }
+}
+connections  {
+  T1Save.input0 = Bypass.output0
+}
+networkModel = ""

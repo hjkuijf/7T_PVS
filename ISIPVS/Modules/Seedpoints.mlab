@@ -1,0 +1,424 @@
+// MDL v1 utf8
+network  {
+  watchlist = ""
+}
+module Info {
+  internal  {
+    frame = "1033 -399 112 80"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "1031 449 564 375"
+        sizeHint = "564 375"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = Info
+  }
+}
+module ImagePropertyConvert {
+  internal  {
+    frame = "805 -395 152 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "589 321 324 631"
+        sizeHint = "324 631"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = ImagePropertyConvert
+    changeDimensionInfo = FALSE
+    cDimInfo = ""
+    tDimInfo = ""
+    uDimInfo = ""
+    a00 = 0.334098861714917
+    a01 = -0.366133395312132
+    a02 = 0.00180620798816715
+    a03 = 10.6783986473057
+    a10 = -0.364511042345167
+    a11 = -0.33554576909184
+    a12 = 0.00410546852898708
+    a13 = 228.266368829383
+    a20 = -0.00252988857238986
+    a21 = -0.00577597115659032
+    a22 = -0.35299443212463
+    a23 = 32.7122106797812
+    a30 = 0
+    a31 = 0
+    a32 = 0
+    a33 = 1
+    worldMatrix = "0.334098861714917 -0.366133395312132 0.00180620798816715 10.6783986473057
+-0.364511042345167 -0.33554576909184 0.00410546852898708 228.266368829383
+-0.00252988857238986 -0.00577597115659032 -0.35299443212463 32.7122106797812
+0 0 0 1"
+    changeDatatype = FALSE
+    datatype = "unsigned int8"
+    changePageSize = FALSE
+    pageSizeX = 32
+    pageSizeY = 32
+    pageSizeZ = 1
+    pageSizeC = 1
+    pageSizeT = 1
+    pageSizeU = 1
+    changeMinGrayValue = FALSE
+    minGrayValue = 0
+    changeMaxGrayValue = FALSE
+    maxGrayValue = 1
+    changeWorldMatrix = TRUE
+    voxelSizeX = 0.494466125965118
+    voxelSizeY = 0.496666878461838
+    voxelSizeZ = 0.353022926125385
+    autoApply = TRUE
+  }
+}
+module SubImage {
+  internal  {
+    frame = "845 -507 88 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "1120 327 395 533"
+        sizeHint = "395 533"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SubImage
+    boxInput = "0 0 0 0 0 0 -1 -1 -1 -1 -1 -1"
+    autoApplyBox = FALSE
+    correctForNegativeSubImageExtents = FALSE
+    enableBoxClamping = FALSE
+    x = 0
+    sx = 32
+    modifyX = FALSE
+    y = 0
+    sy = 32
+    modifyY = FALSE
+    z = 3
+    sz = 1
+    modifyZ = TRUE
+    c = 0
+    sc = 1
+    modifyC = FALSE
+    t = 0
+    st = 1
+    modifyT = FALSE
+    u = 0
+    su = 1
+    modifyU = FALSE
+    fillValue = 0
+    mode = VoxelStartSize
+    autoApply = TRUE
+  }
+}
+module itkImageFileReader {
+  internal  {
+    frame = "829 -275 136 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "815 433 304 395"
+        sizeHint = "304 395"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "717 330 500 600"
+        sizeHint = "260 223"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = itkImageFileReader
+    fileDataType = double
+    autoDetermineDataType = TRUE
+    correctSubVoxelShift = TRUE
+    fileDimension = 3
+    info = "File closed"
+    numDims = 0
+    fileType = TypeNotApplicable
+    componentType = ""
+    pixelType = UNKNOWNPIXELTYPE
+    loaderType = ""
+    outputMetaDataStr = ""
+    suppressErrorPosting = FALSE
+    unresolvedFileName = ""
+  }
+}
+module ImagePropertyConvert {
+  internal  {
+    frame = "1173 -403 152 72"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "805 315 324 631"
+        sizeHint = "324 631"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = T2
+    changeDimensionInfo = FALSE
+    cDimInfo = ""
+    tDimInfo = ""
+    uDimInfo = ""
+    a00 = 1
+    a01 = 0
+    a02 = 0
+    a03 = 0
+    a10 = 0
+    a11 = 1
+    a12 = 0
+    a13 = 0
+    a20 = 0
+    a21 = 0
+    a22 = 1
+    a23 = 0
+    a30 = 0
+    a31 = 0
+    a32 = 0
+    a33 = 1
+    worldMatrix = "1 0 0 0
+0 1 0 0
+0 0 1 0
+0 0 0 1"
+    changeDatatype = TRUE
+    datatype = float
+    changePageSize = FALSE
+    pageSizeX = 32
+    pageSizeY = 32
+    pageSizeZ = 1
+    pageSizeC = 1
+    pageSizeT = 1
+    pageSizeU = 1
+    changeMinGrayValue = FALSE
+    minGrayValue = 0
+    changeMaxGrayValue = FALSE
+    maxGrayValue = 1
+    changeWorldMatrix = FALSE
+    voxelSizeX = 1
+    voxelSizeY = 1
+    voxelSizeZ = 1
+    autoApply = TRUE
+  }
+}
+module itkImageFileWriter {
+  internal  {
+    frame = "1361 -395 128 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "839 429 307 403"
+        sizeHint = "256 403"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "717 330 500 600"
+        sizeHint = "260 223"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = itkImageFileWriter
+    useCompression = FALSE
+    correctSubVoxelShift = TRUE
+    forceDirectionCosineWrite = TRUE
+    outputVoxelType = Automatic
+    info = "File saved successfully"
+    unresolvedFileName = ""
+  }
+}
+module Bypass {
+  internal  {
+    frame = "1485 -247 104 64"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = Mask
+    noBypass = FALSE
+  }
+}
+module Bypass {
+  internal  {
+    frame = "1341 -247 120 64"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = Vesselness
+    noBypass = FALSE
+  }
+}
+module Bypass {
+  internal  {
+    frame = "1101 -247 104 64"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = T2_
+    noBypass = FALSE
+  }
+}
+module Bypass {
+  internal  {
+    frame = "1221 -247 104 64"
+    moduleGroupName = ""
+    showNetworkPanel = true
+  }
+  fields  {
+    instanceName = T1
+    noBypass = FALSE
+  }
+}
+module LoadBase {
+  internal  {
+    frame = "957 -851 120 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "717 533 500 195"
+        sizeHint = "483 195"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "717 330 500 600"
+        sizeHint = "260 223"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = LoadBase
+    autoUpdate = AutoClear
+    nodeName = ""
+    filename = ""
+    useBaseDir = FALSE
+    baseDir = ""
+    format = Auto
+  }
+}
+module SaveBase {
+  internal  {
+    frame = "845 -851 88 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "693 522 548 216"
+        sizeHint = "548 216"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "717 330 500 600"
+        sizeHint = "260 223"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = SaveBase
+    nodeName = XMarkerList
+    filename = ""
+    useBaseDir = FALSE
+    baseDir = ""
+    format = XML
+    autoSave = FALSE
+    allowOverwrite = TRUE
+  }
+}
+module MaskToMarkers {
+  internal  {
+    frame = "817 -731 144 56"
+    moduleGroupName = ""
+    showNetworkPanel = true
+    windows  {
+      window _default {
+        geometry = "709 923 289 146"
+        sizeHint = "289 146"
+        wasOpen = no
+      }
+      window _automatic {
+        geometry = "717 330 500 600"
+        sizeHint = "260 223"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = MaskToMarkers
+    lowerThreshold = 0.5
+    setType = User
+    type = 0
+    updateMode = Off
+    vectorMode = Zero
+  }
+}
+module LocalMaxima {
+  internal  {
+    frame = "837 -619 104 56"
+    moduleGroupName = ""
+    windows  {
+      window _default {
+        geometry = "657 494 321 462"
+        sizeHint = "321 462"
+        wasOpen = no
+      }
+    }
+  }
+  fields  {
+    instanceName = LocalMaxima
+    borderHandling = PadSrcClamp
+    fillValue = 0
+    referenceExtentMode = Overlap
+    kernelX = 7
+    kernelY = 7
+    kernelZ = 7
+    kernelC = 1
+    kernelT = 1
+    kernelU = 1
+    makeSpherical = TRUE
+    normalize = TRUE
+    externalKernel = ""
+    useExternalKernel = FALSE
+    intervalMinOfFilteredVoxels = 0.1
+    intervalMaxOfFilteredVoxels = 2000
+    useIntervalOfFilteredVoxels = FALSE
+    intervalMinOfVoxelsForFiltering = 30
+    intervalMaxOfVoxelsForFiltering = 50
+    useIntervalOfVoxelsForFiltering = FALSE
+    autoCalcMinMax = TRUE
+    outputMin = 1
+    outputMax = 0
+    useMinMax = FALSE
+    returnSourceValue = TRUE
+    calculateMinima = FALSE
+    calculateRealMaxima = FALSE
+  }
+}
+connections  {
+  Info.input0 = T2_.output0
+  ImagePropertyConvert.input0 = itkImageFileReader.output0
+  ImagePropertyConvert.worldMatrix = Info.worldMatrix
+  SubImage.input0 = ImagePropertyConvert.output0
+  T2.input0 = T2_.output0
+  itkImageFileWriter.input0 = Mask.output0
+  SaveBase.inObject = MaskToMarkers.outputXMarkerList
+  MaskToMarkers.input0 = LocalMaxima.output0
+  LocalMaxima.input0 = SubImage.output0
+  LocalMaxima.kernelY = LocalMaxima.kernelX
+  LocalMaxima.kernelZ = LocalMaxima.kernelY
+}
+networkModel = ""
